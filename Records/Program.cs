@@ -22,6 +22,8 @@ namespace Records
             Console.WriteLine("******* Value-based equality - Igualdade baseada em valor *******");
             Console.WriteLine();
             Console.WriteLine($"Comparação de objetos diferentes (do mesmo registro) com dados iguais: {igual}");
+            igual = documento1.GetHashCode().Equals(documento2.GetHashCode());
+            Console.WriteLine($"Comparação de Hash Codes de objetos diferentes (do mesmo registro) com dados iguais: {igual}");
 
             // Comparação de records com herança
             // Comparando um registro criado pela registro base e outro criado pelo registro derivado
